@@ -1,5 +1,14 @@
 #!/bin/zsh
 
+
+#------------------------------------------------------------------------------#
+#                                WARNING                                       #
+#------------------------------------------------------------------------------#
+#
+# I was lazy setting this up so it "sorta" works but only for the nvim folder (which was the only folder I was interested in at the time).
+#
+# It may not work properly!!!
+
 config_dir_dotfiles=/Users/johnpitchko/.dotfiles/config/nvim
 config_dir=/Users/johnpitchko/.config/nvim
 config_dir_backup=/Users/johnpitchko/.config/nvim.bak
