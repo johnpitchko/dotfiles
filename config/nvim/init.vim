@@ -30,8 +30,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
-  " Comment Frames: for making cool looking frames around comments, good for
-  " headers
+  " Comment Frames: for making cool looking frames around comments, good for headers
   Plug 'cometsong/CommentFrame.vim'
 
   " Add numbers to tabline
