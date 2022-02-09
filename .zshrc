@@ -175,6 +175,16 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 ###############################################################################
+## postgresql
+###############################################################################
+
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@13/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@13/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@13/lib/pkgconfig"
+
+###############################################################################
 ## nvm
 ###############################################################################
 export NVM_DIR="$HOME/.nvm"
