@@ -185,10 +185,10 @@ export NVM_DIR="$HOME/.nvm"
 ## Node
 ###############################################################################
 
-export PATH="/usr/local/opt/node@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
-export LDFLAGS="-L/usr/local/opt/node@16/lib"
-export CPPFLAGS="-I/usr/local/opt/node@16/include"
+export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
 
 ###############################################################################
 ## Stripe CLI
