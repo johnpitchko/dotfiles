@@ -104,6 +104,7 @@ let g:ale_fixers = {
  \ 'css': ['prettier'],
  \ 'javascript': ['prettier', 'eslint'],
  \ 'ruby': ['rubocop'],
+ \ 'eruby': ['erblint'],
  \ }
 
 " Enable completion where available.

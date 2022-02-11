@@ -9,7 +9,7 @@
 #
 # It may not work properly!!!
 
-config_dir_dotfiles=/Users/johnpitchko/.dotfiles/config/nvim
+config_dir_dotfiles=/Users/johnpitchko/.dotfiles/.config/nvim
 config_dir=/Users/johnpitchko/.config/nvim
 config_dir_backup=/Users/johnpitchko/.config/nvim.bak
 

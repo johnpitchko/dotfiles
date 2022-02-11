@@ -55,8 +55,9 @@ call plug#begin("~/.config/nvim/plugged")
   "Plug 'neovim/nvim-lspconfig'
   " Code linting
   Plug 'dense-analysis/ale'
+
   " CoC for code completion
-  "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " A language pack for Vim that provides syntax highlighting and indentation for lots and lots of programming languages
   Plug 'sheerun/vim-polyglot'
