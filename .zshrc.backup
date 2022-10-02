@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws git heroku brew ruby rails github zsh-nvm fig)
+plugins=(git heroku brew ruby rails github)
 
 ## For Heroku
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -135,7 +135,7 @@ alias vim='nvim'																														# Replace vim with nvim
 alias cd-tv='cd ~/Code/tradervue'
 alias cd-rio='cd ~/Code/rio'
 alias cd-wm='cd ~/Code/wingman'
-alias jekyll-up='bundle exec jekyll serve --drafts'
+alias jekyll-up='bundle exec jekyll serve'
 alias cd-chord='cd ~/Code/chord-oms'
 
 # Neovim aliases
@@ -149,7 +149,6 @@ alias mv="mv -v"
 
 # Ruby/Rails
 alias rspec='bundle exec rspec'
-alias rc='stty sane && rails c'
 
 # Git
 alias glog='git log --graph --decorate --pretty=oneline --abbrev-commit'	# Show a cool graph of git commit history
@@ -157,9 +156,6 @@ alias gst='git status'
 alias gsw='git switch'
 alias gco='git commit'
 alias gad='git add'
-
-# Chord
-alias heroku-staging="heroku run 'rails c' --app chord-oms-staging"
 
 ###############################################################################
 ## Homebrew
@@ -179,48 +175,20 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 ###############################################################################
-## python@3.0
-###############################################################################
-export PATH="/opt/homebrew/opt/python@3.9/bin:$PATH"
-
-###############################################################################
-## openssl@1.1
-###############################################################################
-export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
-
-###############################################################################
-## postgresql
-###############################################################################
-
-export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
-
-export LDFLAGS="-L/opt/homebrew/opt/postgresql@13/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/postgresql@13/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@13/lib/pkgconfig"
-
-###############################################################################
-## nodeenv
-###############################################################################
-eval "$(nodenv init -)"
-
-###############################################################################
 ## nvm
 ###############################################################################
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 ###############################################################################
 ## Node
 ###############################################################################
 
-# export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/usr/local/opt/node@16/bin:$PATH"
 
-# export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
+export LDFLAGS="-L/usr/local/opt/node@16/lib"
+export CPPFLAGS="-I/usr/local/opt/node@16/include"
 
 ###############################################################################
 ## Stripe CLI
@@ -234,7 +202,3 @@ autoload -Uz compinit && compinit -i
 ################################################################################
 
 export PATH="/Users/johnpitchko/Code/fileserve:$PATH"
-
-## Bison
-export PATH="/opt/homebrew/opt/bison/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
