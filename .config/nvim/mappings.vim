@@ -1,4 +1,3 @@
-
 inoremap jk <Esc>
 inoremap kj <Esc>
 
@@ -32,21 +31,11 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 " ALE
-noremap <leader>f :ALEFix
+noremap <leader>f :ALEFix<CR>
+noremap <leader>d :ALEGoToDefinition<CR>
+noremap gd :ALEGoToDefinition<CR>
 
 " CTRL-S in *all* modes to save
 noremap <silent><c-s> :update<cr>
 vnoremap <silent><c-s> <Esc>:update<cr>
 inoremap <silent><c-s> <Esc>:update<cr>
-
-" CoC
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
