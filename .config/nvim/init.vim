@@ -61,7 +61,7 @@ call plug#end()
 " Include additional configuration in external files
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/mappings.vim
-source $HOME/.config/nvim/plugins/plugins.vim
+source $HOME/.config/nvim/plugins.vim
 "source $HOME/.config/nvim/linterstatus.vim
 " source $HOME/.config/nvim/coc.vim
 " source $HOME/.config/nvim/cmp.vim
