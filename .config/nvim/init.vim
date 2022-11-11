@@ -6,6 +6,7 @@
 call plug#begin("~/.config/nvim/plugged")
   " Start with sensible vim settings
   "Plug 'tpope/vim-sensible'
+  Plug 'neovim/nvim-lspconfig'
   " fzf (fuzzyfinder) and rg (ripgrep) for searching files
   " Source: https://dev.to/hayden/optimizing-your-workflow-with-fzf-ripgrep-2eai
   Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }
