@@ -19,10 +19,11 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   
-  -- Extra Lua functions
+  -- Plenary (extra Lua functions)
   use 'nvim-lua/plenary.nvim'
 
   -- Treesitter (syntax highlighting and more)
+  -- -- Rainbow Parentheses
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
