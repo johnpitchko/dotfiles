@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "p00f/nvim-ts-rainbow"
 
   use 'nvim-tree/nvim-web-devicons'
 
