@@ -1,4 +1,4 @@
 require 'keymaps'
-require 'settings'
+require 'options'
 require 'plugins'
 require 'treesitter'
