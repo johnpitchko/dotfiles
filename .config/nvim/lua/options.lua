@@ -42,3 +42,6 @@ o.wrap = false                  -- Display lines as one long line (i.e. no line 
 o.writebackup = false           -- ???
 
 -- vim.cmd    Runs vimscript in Lua
+-- Surround in [[...]] for multiline 
+-- vim.cmd([[ ]])
+
