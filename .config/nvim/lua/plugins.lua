@@ -22,12 +22,10 @@ return require('packer').startup(function(use)
   -- Extra Lua functions
   use 'nvim-lua/plenary.nvim'
 
+  -- Treesitter (syntax highlighting and more)
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-      local ts_update = require('nvim-treesitter.install').update { with_sync = true }
-      ts_update()
-    end,
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
   }
 
   use 'nvim-tree/nvim-web-devicons'
