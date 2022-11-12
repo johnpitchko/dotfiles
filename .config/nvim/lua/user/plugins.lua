@@ -46,16 +46,16 @@ packer.init {
 }
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'        -- Packer can manage/update itself
-  use 'nvim-lua/popup.nvim'           -- An implementation of the Popup API from vim in Neovim
-  use 'nvim-lua/plenary.nvim' -- Plenary (extra Lua functions)
+  use 'wbthomason/packer.nvim'          -- Packer can manage/update itself
+  use 'nvim-lua/popup.nvim'             -- An implementation of the Popup API from vim in Neovim
+  use 'nvim-lua/plenary.nvim'           -- Plenary (extra Lua functions)
 
   -- Treesitter (syntax highlighting and more)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"          -- Rainbow parentheses
+  use "p00f/nvim-ts-rainbow"            -- Rainbow parentheses
 
   -- Completions
   use 'hrsh7th/nvim-cmp'
@@ -67,10 +67,20 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
 
   -- Snippets
-  use 'L3MON4D3/LuaSnip'              -- Snippet engine
-  use 'rafamadriz/friendly-snippets'  -- A bunch of snippets to use
+  use 'L3MON4D3/LuaSnip'                    -- Snippet engine
+  use 'rafamadriz/friendly-snippets'        -- A bunch of snippets to use
   
-  use 'webdevel/tabulous'             -- Show numbers in tab bar
+  -- LSP
+  use 'jose-elias-alvarez/null-ls.nvim'     -- for formatters and linters
+  use 'neovim/nvim-lspconfig'               -- Enable LSP
+  use 'RRethy/vim-illuminate'
+  use 'williamboman/mason.nvim'             -- Simple-to-use LSP installer
+  use 'williamboman/mason-lspconfig.nvim'
+
+
+
+
+  use 'webdevel/tabulous'                   -- Show numbers in tab bar
 
   -- Colorschemes
   use {'dracula/vim', as = 'dracula' }
