@@ -48,22 +48,29 @@ packer.init {
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'        -- Packer can manage/update itself
   use 'nvim-lua/popup.nvim'           -- An implementation of the Popup API from vim in Neovim
-  
-  -- Plenary (extra Lua functions)
-  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/plenary.nvim' -- Plenary (extra Lua functions)
 
   -- Treesitter (syntax highlighting and more)
-  -- * Rainbow Parentheses
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"
+  use "p00f/nvim-ts-rainbow"          -- Rainbow parentheses
 
-  use 'nvim-tree/nvim-web-devicons'
+  -- Completions
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-path'
 
-  -- Show numbers in tab bar
-  use 'webdevel/tabulous'
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'              -- Snippet engine
+  use 'rafamadriz/friendly-snippets'  -- A bunch of snippets to use
+  
+  use 'webdevel/tabulous'             -- Show numbers in tab bar
 
   -- Colorschemes
   use {'dracula/vim', as = 'dracula' }
@@ -72,6 +79,10 @@ return require('packer').startup(function(use)
   use 'morhetz/gruvbox'
   use 'sainnhe/gruvbox-material'
   use 'sonph/onehalf'
+
+  -- Fonts
+  use 'ryanoasis/vim-devicons'
+  use 'nvim-tree/nvim-web-devicons'
 
   -- Rails
   use 'tpope/vim-rails'
