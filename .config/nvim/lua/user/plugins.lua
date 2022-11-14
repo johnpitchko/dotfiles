@@ -47,8 +47,13 @@ packer.init {
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'          -- Packer can manage/update itself
+
+  use 'numToStr/Comment.nvim'           -- Easily comment stuff
   use 'nvim-lua/popup.nvim'             -- An implementation of the Popup API from vim in Neovim
   use 'nvim-lua/plenary.nvim'           -- Plenary (extra Lua functions)
+  use 'tpope/vim-surround'
+  use 'vim-test/vim-test'
+  use 'webdevel/tabulous'                   -- Show numbers in tab bar
 
   -- Treesitter (syntax highlighting and more)
   use {
@@ -56,12 +61,12 @@ return require('packer').startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"            -- Rainbow parentheses
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- Context-aware comments
 
   -- Completions
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-path'
@@ -69,7 +74,7 @@ return require('packer').startup(function(use)
   -- Snippets
   use 'L3MON4D3/LuaSnip'                    -- Snippet engine
   use 'rafamadriz/friendly-snippets'        -- A bunch of snippets to use
-  
+
   -- LSP
   use 'jose-elias-alvarez/null-ls.nvim'     -- for formatters and linters
   use 'neovim/nvim-lspconfig'               -- Enable LSP
@@ -77,18 +82,23 @@ return require('packer').startup(function(use)
   use 'williamboman/mason.nvim'             -- Simple-to-use LSP installer
   use 'williamboman/mason-lspconfig.nvim'
 
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
 
-
-
-  use 'webdevel/tabulous'                   -- Show numbers in tab bar
 
   -- Colorschemes
+  use 'altercation/vim-colors-solarized'
   use {'dracula/vim', as = 'dracula' }
   use 'folke/tokyonight.nvim'
+  use 'gosukiwi/vim-atom-dark'
+  use 'jacoborus/tender.vim'
   use 'lunarvim/darkplus.nvim'
   use 'morhetz/gruvbox'
+  use 'rakr/vim-one'
   use 'sainnhe/gruvbox-material'
+  use 'sjl/badwolf'
   use 'sonph/onehalf'
+  use 'tomasr/molokai'
 
   -- Fonts
   use 'ryanoasis/vim-devicons'
@@ -99,8 +109,9 @@ return require('packer').startup(function(use)
   use 'vim-ruby/vim-ruby'
   use 'tpope/vim-endwise'
 
-  -- vim-test
-  use 'vim-test/vim-test'
+  -- Git
+  use 'airblade/vim-gitgutter'
+  use 'tpope/vim-fugitive'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

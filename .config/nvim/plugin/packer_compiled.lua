@@ -74,10 +74,20 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  badwolf = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/badwolf",
+    url = "https://github.com/sjl/badwolf"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -139,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  molokai = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/molokai",
+    url = "https://github.com/tomasr/molokai"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -158,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-ts-rainbow"] = {
     loaded = true,
@@ -194,10 +214,30 @@ _G.packer_plugins = {
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/tabulous",
     url = "https://github.com/webdevel/tabulous"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tender.vim"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/tender.vim",
+    url = "https://github.com/jacoborus/tender.vim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-atom-dark"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-atom-dark",
+    url = "https://github.com/gosukiwi/vim-atom-dark"
+  },
+  ["vim-colors-solarized"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-colors-solarized",
+    url = "https://github.com/altercation/vim-colors-solarized"
   },
   ["vim-devicons"] = {
     loaded = true,
@@ -209,10 +249,25 @@ _G.packer_plugins = {
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-endwise",
     url = "https://github.com/tpope/vim-endwise"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    url = "https://github.com/airblade/vim-gitgutter"
+  },
   ["vim-illuminate"] = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["vim-one"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-one",
+    url = "https://github.com/rakr/vim-one"
   },
   ["vim-rails"] = {
     loaded = true,
@@ -223,6 +278,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-ruby",
     url = "https://github.com/vim-ruby/vim-ruby"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-test"] = {
     loaded = true,
