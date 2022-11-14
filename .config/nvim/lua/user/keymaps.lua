@@ -11,6 +11,7 @@ local term_opts = { silent = true }
 --  term_mode = 't'
 --  command_mode = 'c'
 
+-- Convenience function for creating keymaps
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
     if opts then
@@ -62,6 +63,12 @@ map('n', '<C-Right>', ':vertical resize -2<CR>', opts)
 map('n', '<S-l>', ':bnext<CR>', opts)
 map('n', '<S-h>', ':bprevious<CR>', opts)
 
+-- Searching with Telescope
+map('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
+-- Enable below if you don't want the previewer
+-- map('n', '<leader>f', "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+map('n', '<leader>g', '<cmd>Telescope live_grep<cr>', opts)
+
 -- Insert mode
 -- Press jk fast to enter Normal mode
 map('i', 'jk', '<ESC>')
@@ -77,11 +84,10 @@ map('v', 'p', '"_dP', opts)
 
 -- Move text up and down
 -- Doesn't work on Mac; need to map Alt/Option key or some damn thing
-map('v', '<A-j>', ':m .+1<CR>==', opts)
-map('v', '<A-k>', ':m .-2<CR>==', opts)
+-- map('v', '<A-j>', ':m .+1<CR>==', opts)
+-- map('v', '<A-k>', ':m .-2<CR>==', opts)
 
 -- Visual Block
 -- Move text up and down
 map('x', 'J', ":move '>+1<CR>gv-gv", opts)
 map('x', 'K', ":move '<-2<CR>gv-gv", opts)
-
