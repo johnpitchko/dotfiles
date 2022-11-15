@@ -30,9 +30,21 @@ null_ls.setup({
                 buffer = bufnr,
                 callback = function()
                     -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                    vim.lsp.buf.formatting_sync()
+                    -- vim.lsp.buf.formatting_sync()
+                  vim.lsp.buf.format({ bufnr = bufnr })
                 end,
             })
         end
     end,
 })
+
+-- I _think_ this forces the formatter to only use null-ls and avoids prompting when saving to choose which formatter to use
+-- local lsp_formatting = function(bufnr)
+--     vim.lsp.buf.format({
+--         filter = function(client)
+--             -- apply whatever logic you want (in this example, we'll only use null-ls)
+--             return client.name == "null-ls"
+--         end,
+--         bufnr = bufnr,
+--     })
+-- end

@@ -27,7 +27,7 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
 -- Show Lexplore
-map('n', '<leader>t', ':Lex 30<cr>', opts)
+map('n', '<C-Bslash>', ':Lex 30<cr>', opts)
 
 -- CTRL-S to save in *all* modes
 map('n', '<c-s>', ':update<cr>', term_opts)
@@ -68,6 +68,9 @@ map('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
 -- Enable below if you don't want the previewer
 -- map('n', '<leader>f', "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 map('n', '<leader>g', '<cmd>Telescope live_grep<cr>', opts)
+
+-- Testing with vim-test
+map('n', '<leader>t', '<cmd>TestNearest<cr>', opts)
 
 -- Insert mode
 -- Press jk fast to enter Normal mode
