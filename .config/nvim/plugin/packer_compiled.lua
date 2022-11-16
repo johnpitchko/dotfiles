@@ -225,6 +225,11 @@ _G.packer_plugins = {
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/tabulous",
     url = "https://github.com/webdevel/tabulous"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/telescope.nvim",
