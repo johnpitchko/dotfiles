@@ -26,9 +26,6 @@ map("", ",", "<Nop>", opts)
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
--- Show Lexplore
-map("n", "<C-Bslash>", ":Lex 30<cr>", opts)
-
 -- CTRL-S to save in *all* modes
 map("n", "<c-s>", ":update<cr>", term_opts)
 map("v", "<c-s>", "<ESC>:update<cr>", term_opts)
@@ -75,6 +72,10 @@ map("n", "<leader>T", "<cmd>TestFile<cr>", opts)
 map("n", "<leader>a", "<cmd>TestSuite<cr>", opts)
 map("n", "<leader>l", "<cmd>TestLast<cr>", opts)
 map("n", "<leader>g", "<cmd>TestVisit<cr>", opts)
+
+-- File explore with vim-tree
+-- vim-tree keys at https://github.com/nvim-tree/nvim-tree.lua/blob/9d241e5f5889cf8d37c3a8054b3e55157549c283/doc/nvim-tree-lua.txt#L1272
+map("n", "<C-Bslash>", ":NvimTreeToggle<cr>", opts)
 
 -- Insert mode
 -- Press jk fast to enter Normal mode
