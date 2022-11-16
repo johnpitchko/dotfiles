@@ -56,6 +56,17 @@ return require("packer").startup(function(use)
 	use("vim-test/vim-test")
 	use("webdevel/tabulous") -- Show numbers in tab bar
 
+	-- Comment frames
+	use({
+		"s1n7ax/nvim-comment-frame",
+		requires = {
+			{ "nvim-treesitter" },
+		},
+		config = function()
+			require("nvim-comment-frame").setup()
+		end,
+	})
+
 	-- Treesitter (syntax highlighting and more)
 	use({
 		"nvim-treesitter/nvim-treesitter",

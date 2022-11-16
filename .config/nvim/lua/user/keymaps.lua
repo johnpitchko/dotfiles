@@ -31,7 +31,9 @@ map("n", "<c-s>", ":update<cr>", term_opts)
 map("v", "<c-s>", "<ESC>:update<cr>", term_opts)
 map("i", "<c-s>", "<ESC>:update<cr>", term_opts)
 
--- Normal mode
+----------------------------------------------------------------------
+--                           Normal mode                            --
+----------------------------------------------------------------------
 -- Go to tab by number
 map("n", "<leader>1", "1gt")
 map("n", "<leader>2", "2gt")
@@ -71,18 +73,26 @@ map("n", "<leader>t", "<cmd>TestNearest<cr>", opts)
 map("n", "<leader>T", "<cmd>TestFile<cr>", opts)
 map("n", "<leader>a", "<cmd>TestSuite<cr>", opts)
 map("n", "<leader>l", "<cmd>TestLast<cr>", opts)
-map("n", "<leader>g", "<cmd>TestVisit<cr>", opts)
+-- map("n", "<leader>g", "<cmd>TestVisit<cr>", opts)
 
 -- File explore with vim-tree
 -- vim-tree keys at https://github.com/nvim-tree/nvim-tree.lua/blob/9d241e5f5889cf8d37c3a8054b3e55157549c283/doc/nvim-tree-lua.txt#L1272
 map("n", "<C-Bslash>", ":NvimTreeToggle<cr>", opts)
 
--- Insert mode
+-- Comment Frames
+map("n", "<leader>cc", ":lua require('nvim-comment-frame').add_comment()<CR>", opts)
+map("n", "<leader>C", ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", opts)
+
+----------------------------------------------------------------------
+--                              Insert mode                         --
+----------------------------------------------------------------------
 -- Press jk fast to enter Normal mode
 map("i", "jk", "<ESC>")
 map("i", "kj", "<ESC>")
 
--- Visual
+----------------------------------------------------------------------
+--                           Visual mode                            --
+----------------------------------------------------------------------
 -- Stay in indent mode
 map("v", ">", ">gv")
 map("v", "<", "<gv")
@@ -95,7 +105,9 @@ map("v", "p", '"_dP', opts)
 -- map('v', '<A-j>', ':m .+1<CR>==', opts)
 -- map('v', '<A-k>', ':m .-2<CR>==', opts)
 
--- Visual Block
+----------------------------------------------------------------------
+--                        Visual Block mode                         --
+----------------------------------------------------------------------
 -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv-gv", opts)
 map("x", "K", ":move '<-2<CR>gv-gv", opts)
