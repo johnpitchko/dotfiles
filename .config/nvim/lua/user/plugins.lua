@@ -97,6 +97,10 @@ return require("packer").startup(function(use)
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	})
 
 	-- Colorschemes
 	use("altercation/vim-colors-solarized")
