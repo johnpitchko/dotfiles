@@ -7,4 +7,8 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-nvim_tree.setup({})
+nvim_tree.setup({
+	view = {
+		width = 50,
+	},
+})
