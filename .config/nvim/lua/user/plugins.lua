@@ -48,13 +48,13 @@ packer.init({
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim") -- Packer can manage/update itself
 
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Plenary (extra Lua functions)
 	use("nvim-tree/nvim-tree.lua") -- A File Explorer For Neovim Written In Lua
 	use("tpope/vim-surround")
 	use("vim-test/vim-test")
-	use("webdevel/tabulous") -- Show numbers in tab bar
 
 	-- Comment frames
 	use({

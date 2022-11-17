@@ -78,6 +78,7 @@ map("n", "<leader>l", "<cmd>TestLast<cr>", opts)
 -- File explore with vim-tree
 -- vim-tree keys at https://github.com/nvim-tree/nvim-tree.lua/blob/9d241e5f5889cf8d37c3a8054b3e55157549c283/doc/nvim-tree-lua.txt#L1272
 map("n", "<C-Bslash>", ":NvimTreeToggle<cr>", opts)
+map("n", "<C-t>", ":NvimTreeToggle<cr>", opts)
 
 -- Comment Frames
 map("n", "<leader>cc", ":lua require('nvim-comment-frame').add_comment()<CR>", opts)

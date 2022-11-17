@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/badwolf",
     url = "https://github.com/sjl/badwolf"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -219,11 +224,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  tabulous = {
-    loaded = true,
-    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/tabulous",
-    url = "https://github.com/webdevel/tabulous"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
