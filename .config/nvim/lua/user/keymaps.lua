@@ -62,11 +62,11 @@ map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 map("n", "<S-l>", ":bnext<CR>", opts)
 map("n", "<S-h>", ":bprevious<CR>", opts)
 
--- Searching with Telescope
-map("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+-- Searching with fzf
+map("n", "<leader>f", "<cmd>FzfLua files<cr>", opts)
 -- Enable below if you don't want the previewer
 -- map('n', '<leader>f', "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-map("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
+map("n", "<leader>g", "<cmd>FzfLua grep_project<cr>", opts)
 
 -- Testing with vim-test
 map("n", "<leader>t", "<cmd>TestNearest<cr>", opts)
