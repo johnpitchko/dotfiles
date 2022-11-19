@@ -55,6 +55,13 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use("vim-test/vim-test")
 
+  -- fzf-vim
+  use { 'ibhagwan/fzf-lua',
+    -- optional for icon support
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    use { 'junegunn/fzf', run = './install --bin', }
+  }
+
 	-- Comment frames
 	use({
 		"s1n7ax/nvim-comment-frame",
@@ -93,13 +100,6 @@ return require("packer").startup(function(use)
 	use("RRethy/vim-illuminate")
 	use("williamboman/mason.nvim") -- Simple-to-use LSP installer
 	use("williamboman/mason-lspconfig.nvim")
-
-	-- Telescope
-	use("nvim-telescope/telescope.nvim")
-	use({
-		"nvim-telescope/telescope-fzf-native.nvim",
-		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-	})
 
 	-- Colorschemes
 	use("altercation/vim-colors-solarized")
