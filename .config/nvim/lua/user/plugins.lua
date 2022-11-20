@@ -48,6 +48,7 @@ packer.init({
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim") -- Packer can manage/update itself
 
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Plenary (extra Lua functions)
@@ -55,12 +56,13 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use("vim-test/vim-test")
 
-  -- fzf-vim
-  use { 'ibhagwan/fzf-lua',
-    -- optional for icon support
-    requires = { 'kyazdani42/nvim-web-devicons' },
-    use { 'junegunn/fzf', run = './install --bin', }
-  }
+	-- fzf-vim
+	use({
+		"ibhagwan/fzf-lua",
+		-- optional for icon support
+		requires = { "kyazdani42/nvim-web-devicons" },
+		use({ "junegunn/fzf", run = "./install --bin" }),
+	})
 
 	-- Comment frames
 	use({
