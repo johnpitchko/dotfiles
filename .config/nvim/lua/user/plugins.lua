@@ -52,11 +52,18 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Plenary (extra Lua functions)
+
 	use("nvim-tree/nvim-tree.lua") -- A File Explorer For Neovim Written In Lua
 	use("tpope/vim-surround")
 	use("vim-test/vim-test")
 
-	-- fzf-vim
+	-- A blazing fast and easy to configure Neovim statusline written in Lua.
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
+
+	-- fzf-vim Fuzzy finder using fd and rg
 	use({
 		"ibhagwan/fzf-lua",
 		-- optional for icon support
