@@ -61,6 +61,16 @@ map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 -- Navigate buffers
 map("n", "<S-l>", ":bnext<CR>", opts)
 map("n", "<S-h>", ":bprevious<CR>", opts)
+-- map("n", "<leader>1", ":1b<CR>", opts)
+-- map("n", "<leader>2", ":2b<CR>", opts)
+-- map("n", "<leader>3", ":3b<CR>", opts)
+-- map("n", "<leader>4", ":4b<CR>", opts)
+-- map("n", "<leader>5", ":5b<CR>", opts)
+-- map("n", "<leader>6", ":6b<CR>", opts)
+-- map("n", "<leader>7", ":7b<CR>", opts)
+-- map("n", "<leader>8", ":8b<CR>", opts)
+-- map("n", "<leader>9", ":9b<CR>", opts)
+-- map("n", "<leader>0", ":10b<CR>", opts)
 
 -- Searching with fzf
 map("n", "<leader>f", "<cmd>FzfLua files<cr>", opts)
