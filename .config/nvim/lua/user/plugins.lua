@@ -103,7 +103,6 @@ return require("packer").startup(function(use)
 	use("rafamadriz/friendly-snippets") -- A bunch of snippets to use
 
 	-- LSP
-	use("folke/trouble.nvim")
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("neovim/nvim-lspconfig") -- Enable LSP
 	use("RRethy/vim-illuminate")
