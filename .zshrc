@@ -179,9 +179,14 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 ###############################################################################
-## python@3.0
+## python@3.x
 ###############################################################################
-export PATH="/opt/homebrew/opt/python@3.9/bin:$PATH"
+
+# There are multiple versions of Python 3 installed, so put the most recent one first on the PATH.
+export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
+
+# Use the binaries in 3.10
+export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
 
 ###############################################################################
 ## openssl@1.1
@@ -202,11 +207,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/postgresql@13/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@13/lib/pkgconfig"
 
 ###############################################################################
-## nodeenv
-###############################################################################
-eval "$(nodenv init -)"
-
-###############################################################################
 ## nvm
 ###############################################################################
 # export NVM_DIR="$HOME/.nvm"
@@ -216,11 +216,10 @@ eval "$(nodenv init -)"
 ###############################################################################
 ## Node
 ###############################################################################
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
-# export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-
-# export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
+export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
 
 ###############################################################################
 ## Stripe CLI
@@ -229,12 +228,16 @@ eval "$(nodenv init -)"
 fpath=(~/.stripe $fpath)
 autoload -Uz compinit && compinit -i
 
-################################################################################
-## Tradervue
-################################################################################
-
-export PATH="/Users/johnpitchko/Code/fileserve:$PATH"
+#--------------------------------------------------------------------#
+#                               Redis                                #
+#--------------------------------------------------------------------#
+export PATH="/opt/homebrew/opt/redis@6.2/bin:$PATH"
 
 ## Bison
 export PATH="/opt/homebrew/opt/bison/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
+
+#--------------------------------------------------------------------#
+#                              LunarVim                              #
+#--------------------------------------------------------------------#
+export PATH=/Users/johnpitchko/.local/bin:$PATH

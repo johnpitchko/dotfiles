@@ -46,12 +46,13 @@ packer.init({
 })
 
 return require("packer").startup(function(use)
+	-- Core plugins
 	use("wbthomason/packer.nvim") -- Packer can manage/update itself
+	use("nvim-lua/plenary.nvim") -- Plenary (extra Lua functions)
+	use("numToStr/Comment.nvim") -- Easily comment stuff
 
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
-	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
-	use("nvim-lua/plenary.nvim") -- Plenary (extra Lua functions)
 
 	use("nvim-tree/nvim-tree.lua") -- A File Explorer For Neovim Written In Lua
 	use("tpope/vim-surround")
@@ -103,7 +104,6 @@ return require("packer").startup(function(use)
 	use("rafamadriz/friendly-snippets") -- A bunch of snippets to use
 
 	-- LSP
-	use("folke/trouble.nvim")
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("neovim/nvim-lspconfig") -- Enable LSP
 	use("RRethy/vim-illuminate")
