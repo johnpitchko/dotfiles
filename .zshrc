@@ -236,3 +236,8 @@ export PATH="/opt/homebrew/opt/redis@6.2/bin:$PATH"
 ## Bison
 export PATH="/opt/homebrew/opt/bison/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
+
+#--------------------------------------------------------------------#
+#                              LunarVim                              #
+#--------------------------------------------------------------------#
+export PATH=/Users/johnpitchko/.local/bin:$PATH
