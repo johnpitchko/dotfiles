@@ -10,8 +10,9 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save.enabled = false
+lvim.format_on_save.enabled = true
 lvim.colorscheme = "lunar"
+lvim.colorcolumn = 80
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -30,11 +31,11 @@ lvim.keys.insert_mode["jk"] = "<Esc>"
 lvim.keys.insert_mode["kj"] = "<Esc>"
 
 -- -- vim-test
-lvim.builtin.which_key.mappings["t"] = {
-  "<cmd>TestNearest<cr>"
+lvim.builtin.which_key.mappings["h"] = {
+  "<cmd>TestNearest<cr>", "TestNearest"
 }
 lvim.builtin.which_key.mappings["T"] = {
-  "<cmd>TestFile<cr>"
+  "<cmd>TestFile<cr>", "TestFile"
 }
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
@@ -82,16 +83,16 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
---  "c",
+  --  "c",
   "javascript",
   "json",
   "lua",
---  "python",
---  "typescript",
---  "tsx",
+  --  "python",
+  --  "typescript",
+  --  "tsx",
   "css",
   "rust",
---  "java",
+  --  "java",
   "yaml",
   "ruby",
 }
@@ -102,10 +103,10 @@ lvim.builtin.treesitter.highlight.enable = true
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
--- lvim.lsp.installer.setup.ensure_installed = {
---     "sumneko_lua",
---     "jsonls",
--- }
+lvim.lsp.installer.setup.ensure_installed = {
+  "sumneko_lua",
+  "solargraph",
+}
 -- -- change UI setting of `LspInstallInfo`
 -- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
 -- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = false
@@ -176,14 +177,11 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
-  {"tpope/vim-endwise"},
-  {"tpope/vim-rails"},
-  {"tpope/vim-surround"},
-  {"vim-ruby/vim-ruby"},
-  {"vim-test/vim-test"},
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
+  { "tpope/vim-endwise" },
+  { "tpope/vim-rails" },
+  { "tpope/vim-surround" },
+  { "vim-ruby/vim-ruby" },
+  { "vim-test/vim-test" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
