@@ -132,11 +132,9 @@ alias grep='grep --color=auto'                  													# Make grep pretty
 alias fs='foreman start -f Procfile'																				# Start Wingman
 alias exa='exa --long --header --git'																				# Show exa output in long format with headers and Git info
 alias vim='nvim'																														# Replace vim with nvim
-alias cd-tv='cd ~/Code/tradervue'
 alias cd-rio='cd ~/Code/rio'
 alias cd-wm='cd ~/Code/wingman'
 alias jekyll-up='bundle exec jekyll serve --drafts'
-alias cd-chord='cd ~/Code/chord-oms'
 
 # Neovim aliases
 alias nviminit='nvim ~/.config/nvim/init.vim'														# Shortcut to open neovim config
@@ -159,8 +157,11 @@ alias gco='git commit'
 alias gad='git add'
 
 # Chord
-alias heroku-staging="heroku run 'rails c' --app chord-oms-staging"
-
+alias cd-chord='cd ~/Code/chord-oms'
+alias chord-oms-staging="heroku run 'rails c' --app chord-oms-staging"
+alias chord-oms-prod="heroku run 'rails c' --app chord-oms-prod"
+alias bbc-oms-staging="heroku run 'rails c' --app bbc-oms-staging"
+alias bbc-oms-prod="heroku run 'rails c' --app bbc-oms-prod"
 ###############################################################################
 ## Homebrew
 ###############################################################################
