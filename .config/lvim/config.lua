@@ -31,7 +31,7 @@ lvim.keys.insert_mode["jk"] = "<Esc>"
 lvim.keys.insert_mode["kj"] = "<Esc>"
 
 -- -- vim-test
-lvim.builtin.which_key.mappings["h"] = {
+lvim.builtin.which_key.mappings["t"] = {
   "<cmd>TestNearest<cr>", "TestNearest"
 }
 lvim.builtin.which_key.mappings["T"] = {
@@ -145,7 +145,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "rubocop", filetypes = { "ruby" } },
+  { command = "rubocop", filetypes = { "ruby", "eruby" } },
   --   { command = "black", filetypes = { "python" } },
   --   { command = "isort", filetypes = { "python" } },
   --   {
@@ -162,7 +162,7 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "rubocop", filetypes = { "ruby" } },
+  { command = "rubocop", filetypes = { "ruby", "eruby" } },
   --   { command = "flake8", filetypes = { "python" } },
   --   {
   --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
