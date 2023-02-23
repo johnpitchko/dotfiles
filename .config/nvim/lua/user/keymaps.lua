@@ -20,11 +20,11 @@ function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Leader key is ,
+-- Leader key is <space>
 -- First set it to no-op to clear any other bindings
-map("", ",", "<Nop>", opts)
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+map("", "<space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- CTRL-S to save in *all* modes
 map("n", "<c-s>", ":update<cr>", term_opts)
