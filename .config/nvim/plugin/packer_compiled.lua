@@ -309,6 +309,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/johnpitchko/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

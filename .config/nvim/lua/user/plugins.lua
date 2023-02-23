@@ -50,10 +50,8 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim") -- Packer can manage/update itself
 	use("nvim-lua/plenary.nvim") -- Plenary (extra Lua functions)
 	use("numToStr/Comment.nvim") -- Easily comment stuff
-
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
-
 	use("nvim-tree/nvim-tree.lua") -- A File Explorer For Neovim Written In Lua
 	use("tpope/vim-surround")
 	use("vim-test/vim-test")
@@ -63,6 +61,9 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+
+	-- WhichKey
+	use("folke/which-key.nvim")
 
 	-- fzf-vim Fuzzy finder using fd and rg
 	use({
