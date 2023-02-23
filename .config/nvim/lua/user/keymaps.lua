@@ -35,28 +35,28 @@ map("i", "<c-s>", "<ESC>:update<cr>", term_opts)
 --                           Normal mode                            --
 ----------------------------------------------------------------------
 -- Go to tab by number
-map("n", "<leader>1", "1gt")
-map("n", "<leader>2", "2gt")
-map("n", "<leader>3", "3gt")
-map("n", "<leader>4", "4gt")
-map("n", "<leader>5", "5gt")
-map("n", "<leader>6", "6gt")
-map("n", "<leader>7", "7gt")
-map("n", "<leader>8", "8gt")
-map("n", "<leader>9", "9gt")
-map("n", "<leader>0", ":tablast<CR>")
+-- map("n", "<leader>1", "1gt")
+-- map("n", "<leader>2", "2gt")
+-- map("n", "<leader>3", "3gt")
+-- map("n", "<leader>4", "4gt")
+-- map("n", "<leader>5", "5gt")
+-- map("n", "<leader>6", "6gt")
+-- map("n", "<leader>7", "7gt")
+-- map("n", "<leader>8", "8gt")
+-- map("n", "<leader>9", "9gt")
+-- map("n", "<leader>0", ":tablast<CR>")
 
 -- Better window navigation
-map("n", "<C-h>", "<C-w>h", opts)
-map("n", "<C-j>", "<C-w>j", opts)
-map("n", "<C-k>", "<C-w>k", opts)
-map("n", "<C-l>", "<C-w>l", opts)
+-- map("n", "<C-h>", "<C-w>h", opts)
+-- map("n", "<C-j>", "<C-w>j", opts)
+-- map("n", "<C-k>", "<C-w>k", opts)
+-- map("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-map("n", "<C-Up>", ":resize +2<CR>", opts)
-map("n", "<C-Down>", ":resize -2<CR>", opts)
-map("n", "<C-Left>", ":vertical resize +2<CR>", opts)
-map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+-- map("n", "<C-Up>", ":resize +2<CR>", opts)
+-- map("n", "<C-Down>", ":resize -2<CR>", opts)
+-- map("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+-- map("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- Navigate buffers
 map("n", "<S-l>", ":bnext<CR>", opts)
@@ -79,20 +79,20 @@ map("n", "<leader>f", "<cmd>FzfLua files<cr>", opts)
 map("n", "<leader>g", "<cmd>FzfLua grep_project<cr>", opts)
 
 -- Testing with vim-test
-map("n", "<leader>t", "<cmd>TestNearest<cr>", opts)
-map("n", "<leader>T", "<cmd>TestFile<cr>", opts)
-map("n", "<leader>a", "<cmd>TestSuite<cr>", opts)
-map("n", "<leader>l", "<cmd>TestLast<cr>", opts)
+-- map("n", "<leader>t", "<cmd>TestNearest<cr>", opts)
+-- map("n", "<leader>T", "<cmd>TestFile<cr>", opts)
+-- map("n", "<leader>a", "<cmd>TestSuite<cr>", opts)
+-- map("n", "<leader>l", "<cmd>TestLast<cr>", opts)
 -- map("n", "<leader>g", "<cmd>TestVisit<cr>", opts)
 
 -- File explore with vim-tree
 -- vim-tree keys at https://github.com/nvim-tree/nvim-tree.lua/blob/9d241e5f5889cf8d37c3a8054b3e55157549c283/doc/nvim-tree-lua.txt#L1272
-map("n", "<C-Bslash>", ":NvimTreeToggle<cr>", opts)
+-- map("n", "<C-Bslash>", ":NvimTreeToggle<cr>", opts)
 -- map("n", "<C-t>", ":NvimTreeToggle<cr>", opts)
 
 -- Comment Frames
-map("n", "<leader>cc", ":lua require('nvim-comment-frame').add_comment()<CR>", opts)
-map("n", "<leader>C", ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", opts)
+-- map("n", "<leader>cc", ":lua require('nvim-comment-frame').add_comment()<CR>", opts)
+-- map("n", "<leader>C", ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", opts)
 
 ----------------------------------------------------------------------
 --                              Insert mode                         --
