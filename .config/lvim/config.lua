@@ -21,8 +21,8 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
 lvim.keys.insert_mode["<c-s>"] = "<esc>:w<cr>"
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -146,7 +146,7 @@ lvim.lsp.installer.setup.ensure_installed = {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "rubocop", filetypes = { "ruby" } },
-  { command = "erb-lint", filetypes = { "eruby" } },
+  -- { command = "erb-lint", filetypes = { "eruby" } },
   --   { command = "black", filetypes = { "python" } },
   --   { command = "isort", filetypes = { "python" } },
   --   {
