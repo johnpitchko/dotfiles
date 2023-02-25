@@ -146,7 +146,11 @@ lvim.lsp.installer.setup.ensure_installed = {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   -- { command = "rubocop", filetypes = { "ruby" } },
-  { command = "erblint", filetypes = { "eruby" } },
+  {
+    command = "prettier",
+    filetypes = { "eruby" },
+    args = { "--write", "--parser", "html" }
+  },
   --   { command = "black", filetypes = { "python" } },
   --   { command = "isort", filetypes = { "python" } },
   --   {
@@ -164,7 +168,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   -- { command = "rubocop", filetypes = { "ruby" } },
-  { command = "erblint", filetypes = { "eruby" } },
+  { command = "erb-lint", filetypes = { "eruby" } },
   --   { command = "flake8", filetypes = { "python" } },
   --   {
   --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
