@@ -151,7 +151,6 @@ formatters.setup {
     filetypes = { "eruby" },
     args = { "--write", "--parser", "html" }
   },
-  -- { command = "rubocop", filetypes = { "ruby" } },
   --   { command = "black", filetypes = { "python" } },
   --   { command = "isort", filetypes = { "python" } },
   --   {
@@ -168,10 +167,10 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "erb_lint",
+  {
+    command = "erb_lint",
     filetypes = { "eruby" },
   },
-  -- { command = "rubocop", filetypes = { "ruby" } },
   --   { command = "flake8", filetypes = { "python" } },
   --   {
   --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
@@ -188,9 +187,46 @@ linters.setup {
 }
 
 -- Additional Plugins
+-- After adding/removing a plugin run `:LvimReload` to install/remove the plugin via `:PackerSync`.
+-- Use `:PackerStatus` to view the list of currently installed plugins.
 lvim.plugins = {
-  { "tpope/vim-endwise" },
-  { "tpope/vim-rails" },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+  { "RRethy/nvim-treesitter-endwise",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        endwise = {
+          enable = true,
+        }
+      }
+    end
+  },
+  {
+    "tpope/vim-rails",
+    cmd = {
+      "Eview",
+      "Econtroller",
+      "Emodel",
+      "Smodel",
+      "Sview",
+      "Scontroller",
+      "Vmodel",
+      "Vview",
+      "Vcontroller",
+      "Tmodel",
+      "Tview",
+      "Tcontroller",
+      "Rails",
+      "Generate",
+      "Runner",
+      "Extract"
+    }
+  },
   { "tpope/vim-surround" },
   { "vim-ruby/vim-ruby" },
   { "vim-test/vim-test" },
