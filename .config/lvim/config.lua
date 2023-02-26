@@ -205,6 +205,7 @@ lvim.plugins = {
       require("todo-comments").setup()
     end,
   },
+  -- Alternative to tpope/vim-endwise that is TreeSitter compatible
   { "RRethy/nvim-treesitter-endwise",
     config = function()
       require("nvim-treesitter.configs").setup {
@@ -235,6 +236,9 @@ lvim.plugins = {
       "Extract"
     }
   },
+  { "LudoPinelli/comment-box.nvim" },
+  { "LudoPinelli/comment-box.nvim" },
+  { "tpope/vim-rails" },
   { "tpope/vim-surround" },
   { "vim-ruby/vim-ruby" },
   { "vim-test/vim-test" },
