@@ -14,6 +14,8 @@ fi
 ## Shell config & aliases
 ###############################################################################
 
+setopt autocd
+
 export NVIMHOME="$HOME/.config/nvim"
 
 # Alias to quickly edit zsh config
