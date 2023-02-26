@@ -1,5 +1,3 @@
-## For Heroku
-FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -14,9 +12,11 @@ fi
 ## Shell config & aliases
 ###############################################################################
 
-setopt autocd
-
 export NVIMHOME="$HOME/.config/nvim"
+
+# Enter directory by typing its name.
+# Also go up a directory with ..
+setopt autocd
 
 # Alias to quickly edit zsh config
 alias zshconfig="lvim ~/.zshrc"
@@ -25,16 +25,16 @@ alias zshsource="source ~/.zshrc"
 alias ll="ls -lah"
 
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
-alias grep='grep --color=auto'                  													# Make grep pretty
+alias grep='grep --color=auto'                  													  # Make grep pretty
 alias fs='foreman start -f Procfile'																				# Start Wingman
 alias exa='exa --long --header --git'																				# Show exa output in long format with headers and Git info
 alias vim='lvim'																														# Replace vim with nvim
 alias jekyll-up='bundle exec jekyll serve --drafts'
 
 # Neovim aliases
-alias nviminit='nvim ~/.config/nvim/init.vim'														# Shortcut to open neovim config
-alias nvimmappings='nvim ~/.config/nvim/mappings.vim'
-alias nvimsettings='nvim ~/.config/nvim/settings.vim'
+# alias nviminit='nvim ~/.config/nvim/init.vim'														# Shortcut to open neovim config
+# alias nvimmappings='nvim ~/.config/nvim/mappings.vim'
+# alias nvimsettings='nvim ~/.config/nvim/settings.vim'
 
 # Make commands verbose
 alias cp="cp -v"
@@ -138,5 +138,11 @@ export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
 #                              LunarVim                              #
 #--------------------------------------------------------------------#
 export PATH=/Users/johnpitchko/.local/bin:$PATH
+
+#  ╭──────────────────────────────────────────────────────────────────────────────╮
+#  │                                  For Heroku                                  │
+#  ╰──────────────────────────────────────────────────────────────────────────────╯
+
+FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
 eval "$(starship init zsh)"
