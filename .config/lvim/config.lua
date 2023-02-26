@@ -32,10 +32,9 @@ lvim.keys.insert_mode["kj"] = "<Esc>"
 
 -- -- vim-test
 lvim.builtin.which_key.mappings["t"] = {
-  "<cmd>TestNearest<cr>", "TestNearest"
-}
-lvim.builtin.which_key.mappings["T"] = {
-  "<cmd>TestFile<cr>", "TestFile"
+  name = "Test (vim-test)",
+  t = { "<cmd>TestNearest<cr>", "TestNearest" },
+  T = { "<cmd>TestFile<cr>", "TestFile" }
 }
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
