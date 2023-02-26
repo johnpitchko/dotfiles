@@ -101,6 +101,15 @@ lvim.builtin.treesitter.ensure_installed = {
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
+-- Completion settings
+
+-- The completions from solargraph are worse than LuaSnip (or whatever), so disable solargraph.
+require("lspconfig")["solargraph"].setup {
+  on_attach = function(client)
+    client.server_capabilities.completionProvider = false
+  end
+}
+
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
