@@ -154,11 +154,11 @@ lvim.lsp.installer.setup.ensure_installed = {
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  {
-    command = "prettier",
-    filetypes = { "eruby" },
-    args = { "--write", "--parser", "html" }
-  },
+  -- {
+  --   command = "prettier",
+  --   filetypes = { "eruby" },
+  --   args = { "--write", "--parser", "html" }
+  -- },
   --   { command = "black", filetypes = { "python" } },
   --   { command = "isort", filetypes = { "python" } },
   --   {
@@ -237,8 +237,6 @@ lvim.plugins = {
     }
   },
   { "LudoPinelli/comment-box.nvim" },
-  { "LudoPinelli/comment-box.nvim" },
-  { "tpope/vim-rails" },
   { "tpope/vim-surround" },
   { "vim-ruby/vim-ruby" },
   { "vim-test/vim-test" },
