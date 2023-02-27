@@ -75,6 +75,7 @@ lvim.builtin.which_key.mappings["t"] = {
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.lualine.sections.lualine_b = { "vim.fn['FugitiveStatusline']()" }
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
@@ -151,13 +152,36 @@ lvim.lsp.installer.setup.ensure_installed = {
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 
+-- -- custom sources
+local helpers = require("null-ls.helpers")
+local FORMATTING = require("null-ls.methods").internal.FORMATTING
+
+require("null-ls").register({
+  --your custom sources go here
+  helpers.make_builtin({
+    name = "htmlbeautifier",
+    meta = {
+      url = "https://github.com/threedaymonk/htmlbeautifier",
+      description = "A normaliser/beautifier for HTML that also understands embedded Ruby. Ideal for tidying up Rails templates."
+    },
+    method = FORMATTING,
+    filetypes = { "eruby" },
+    generator_opts = {
+      command = "htmlbeautifier",
+      to_stdin = true,
+    },
+    factory = helpers.formatter_factory,
+  })
+})
+
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
+  -- { command = "erb-lint", filetypes = { "eruby" } },
+  -- { command = "erb_lint", filetypes = { "eruby" } },
   -- {
-  --   command = "prettier",
+  --   command = "htmlbeautifier",
   --   filetypes = { "eruby" },
-  --   args = { "--write", "--parser", "html" }
   -- },
   --   { command = "black", filetypes = { "python" } },
   --   { command = "isort", filetypes = { "python" } },
@@ -175,10 +199,10 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  {
-    command = "erb_lint",
-    filetypes = { "eruby" },
-  },
+  -- {
+  --   command = "erb_lint",
+  --   filetypes = { "eruby" },
+  -- },
   --   { command = "flake8", filetypes = { "python" } },
   --   {
   --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
@@ -238,6 +262,25 @@ lvim.plugins = {
   },
   { "LudoPinelli/comment-box.nvim" },
   { "tpope/vim-surround" },
+  {
+    "tpope/vim-fugitive",
+    cmd = {
+      "G",
+      "Git",
+      "Gdiffsplit",
+      "Gread",
+      "Gwrite",
+      "Ggrep",
+      "GMove",
+      "GDelete",
+      "GBrowse",
+      "GRemove",
+      "GRename",
+      "Glgrep",
+      "Gedit"
+    },
+    ft = { "fugitive" }
+  },
   { "vim-ruby/vim-ruby" },
   { "vim-test/vim-test" },
 }
