@@ -1,18 +1,8 @@
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='lvim'
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ###############################################################################
 ## Shell config & aliases
 ###############################################################################
-
-export NVIMHOME="$HOME/.config/nvim"
 
 # Enter directory by typing its name.
 # Also go up a directory with ..
@@ -22,14 +12,13 @@ setopt autocd
 alias zshconfig="lvim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 
-alias ll="ls -lah"
-
-alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
-alias grep='grep --color=auto'                  													  # Make grep pretty
-alias fs='foreman start -f Procfile'																				# Start Wingman
 alias exa='exa --long --header --git'																				# Show exa output in long format with headers and Git info
-alias vim='lvim'																														# Replace vim with nvim
+alias fs='foreman start -f Procfile'																				# Start Wingman
+alias grep='grep --color=auto'                  													  # Make grep pretty
 alias jekyll-up='bundle exec jekyll serve --drafts'
+alias ll="ls -lah"
+alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
+alias vim='lvim'																														# Replace vim with nvim
 
 # Neovim aliases
 # alias nviminit='nvim ~/.config/nvim/init.vim'														# Shortcut to open neovim config
@@ -42,7 +31,7 @@ alias mv="mv -v"
 
 # Ruby/Rails
 alias rspec='bundle exec rspec'
-alias rc='stty sane && rails c'
+alias rc='stty sane && bundle exec rails c'
 
 # Git
 alias glog='git log --graph --decorate --pretty=oneline --abbrev-commit'	# Show a cool graph of git commit history
@@ -57,6 +46,19 @@ alias chord-oms-staging="heroku run 'rails c' --app chord-oms-staging"
 alias chord-oms-prod="heroku run 'rails c' --app chord-oms-prod"
 alias bbc-oms-staging="heroku run 'rails c' --app bbc-oms-staging"
 alias bbc-oms-prod="heroku run 'rails c' --app bbc-oms-prod"
+
+#--------------------------------------------------------------------#
+#                              vim/Neovim/Lunarvim                   #
+#--------------------------------------------------------------------#
+export PATH=/Users/johnpitchko/.local/bin:$PATH
+export NVIMHOME="$HOME/.config/nvim"
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='lvim'
+fi
 
 ###############################################################################
 ## Homebrew
@@ -134,10 +136,6 @@ export PATH="/opt/homebrew/opt/redis@6.2/bin:$PATH"
 export PATH="/opt/homebrew/opt/bison/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
 
-#--------------------------------------------------------------------#
-#                              LunarVim                              #
-#--------------------------------------------------------------------#
-export PATH=/Users/johnpitchko/.local/bin:$PATH
 
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
 #  │                                  For Heroku                                  │
@@ -145,4 +143,6 @@ export PATH=/Users/johnpitchko/.local/bin:$PATH
 
 FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
+## Starship
+# Must be last line in .zshrc!
 eval "$(starship init zsh)"
