@@ -65,6 +65,8 @@ fi
 ###############################################################################
 
 export PATH="/usr/local/sbin:$PATH"
+# Necessary because Homebrew installs packages to different directories on Intel and ARM computers!
+export BREW_PATH=$(brew --prefix)
 
 ###############################################################################
 ## rbenv
@@ -82,43 +84,39 @@ eval "$(rbenv init -)"
 ###############################################################################
 
 # There are multiple versions of Python 3 installed, so put the most recent one first on the PATH.
-export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
+export PATH="$BREW_PATH/opt/python@3.10/bin:$PATH"
 
 # Use the binaries in 3.10
-export PATH="/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
+export PATH="$BREW_PATH/opt/python@3.10/libexec/bin:$PATH"
 
 ###############################################################################
 ## openssl@1.1
 ###############################################################################
-export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
+export PATH="$BREW_PATH/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L$BREW_PATH/opt/openssl@1.1/lib"
+export CPPFLAGS="-I$BREW_PATH/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="$BREW_PATH/opt/openssl@1.1/lib/pkgconfig"
 
 ###############################################################################
 ## postgresql
 ###############################################################################
 
-export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export PATH="$BREW_PATH/opt/postgresql@13/bin:$PATH"
 
-export LDFLAGS="-L/opt/homebrew/opt/postgresql@13/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/postgresql@13/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@13/lib/pkgconfig"
-
-###############################################################################
-## nvm
-###############################################################################
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-# [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export LDFLAGS="-L$BREW_PATH/opt/postgresql@13/lib"
+export CPPFLAGS="-I$BREW_PATH/opt/postgresql@13/include"
+export PKG_CONFIG_PATH="$BREW_PATH/opt/postgresql@13/lib/pkgconfig"
 
 ###############################################################################
 ## Node
 ###############################################################################
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="$BREW_PATH/opt/node@16/bin:$PATH"
 
-export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
+export LDFLAGS="-L$BREW_PATH/opt/node@16/lib"
+export CPPFLAGS="-I$BREW_PATH/opt/node@16/include"
+
+# For nodenv
+eval "$(nodenv init -)"
 
 ###############################################################################
 ## Stripe CLI
@@ -130,12 +128,11 @@ autoload -Uz compinit && compinit -i
 #--------------------------------------------------------------------#
 #                               Redis                                #
 #--------------------------------------------------------------------#
-export PATH="/opt/homebrew/opt/redis@6.2/bin:$PATH"
+export PATH="$BREW_PATH/opt/redis@6.2/bin:$PATH"
 
 ## Bison
-export PATH="/opt/homebrew/opt/bison/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
-
+export PATH="$BREW_PATH/opt/bison/bin:$PATH"
+export LDFLAGS="-L$BREW_PATH/opt/bison/lib"
 
 #  ╭──────────────────────────────────────────────────────────────────────────────╮
 #  │                                  For Heroku                                  │
