@@ -177,6 +177,7 @@ require("null-ls").register({
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
+  { command = "rubocop", filetypes = { "ruby" } }
   -- { command = "erb-lint", filetypes = { "eruby" } },
   -- { command = "erb_lint", filetypes = { "eruby" } },
   -- {
@@ -199,6 +200,7 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
+  { command = "rubocop", filetypes = { "ruby" } }
   -- {
   --   command = "erb_lint",
   --   filetypes = { "eruby" },
