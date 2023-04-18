@@ -1,5 +1,6 @@
 begin
   require 'irb'
+  require 'rainbow'
   require 'rubygems'
   require 'amazing_print'
 rescue LoadError => e
