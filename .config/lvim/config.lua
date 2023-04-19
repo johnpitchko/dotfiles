@@ -11,7 +11,7 @@ vim.opt.relativenumber = true
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
-  pattern = "*.lua",
+  -- pattern = "*.lua",
   timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -73,7 +73,7 @@ lvim.builtin.telescope.theme = "center"
 -- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
 --   return server ~= "emmet_ls"
 -- end, lvim.lsp.automatic_configuration.skipped_servers)
-
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "standardrb" })
 -- -- you can set a custom on_attach function that will be used for all the language servers
 -- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
@@ -85,23 +85,14 @@ lvim.builtin.telescope.theme = "center"
 -- end
 
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "stylua" },
---   {
---     command = "prettier",
---     extra_args = { "--print-width", "100" },
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     command = "shellcheck",
---     args = { "--severity", "warning" },
---   },
--- }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "rubocop", filetypes = { "ruby" } },
+}
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "rubocop", filetypes = { "ruby" } },
+}
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
