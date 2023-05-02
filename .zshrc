@@ -18,7 +18,6 @@ alias grep='grep --color=auto'                  													  # Make grep prett
 alias jekyll-up='bundle exec jekyll serve --drafts'
 alias ll="ls -lah"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
-alias vim='lvim'																														# Replace vim with nvim
 
 # Neovim aliases
 # alias nviminit='nvim ~/.config/nvim/init.vim'														# Shortcut to open neovim config
@@ -101,8 +100,13 @@ export PKG_CONFIG_PATH="$BREW_PATH/opt/openssl@1.1/lib/pkgconfig"
 ## postgresql
 ###############################################################################
 
-export PATH="$BREW_PATH/opt/postgresql@13/bin:$PATH"
+export PATH="$BREW_PATH/opt/postgresql@15/bin:$PATH"
+export LDFLAGS="-L$BREW_PATH/opt/postgresql@15/lib"
+export CPPFLAGS="-I$BREW_PATH/opt/postgresql@15/include"
+export PKG_CONFIG_PATH="$BREW_PATH/opt/postgresql@15/lib/pkgconfig"
 
+# Chord OMS uses Postgresql v13, so maintain the paths here.
+export PATH="$BREW_PATH/opt/postgresql@13/bin:$PATH"
 export LDFLAGS="-L$BREW_PATH/opt/postgresql@13/lib"
 export CPPFLAGS="-I$BREW_PATH/opt/postgresql@13/include"
 export PKG_CONFIG_PATH="$BREW_PATH/opt/postgresql@13/lib/pkgconfig"
@@ -121,9 +125,13 @@ eval "$(nodenv init -)"
 ###############################################################################
 ## Stripe CLI
 ###############################################################################
-
 fpath=(~/.stripe $fpath)
 autoload -Uz compinit && compinit -i
+
+###############################################################################
+## Rust
+###############################################################################
+export PATH="/Users/johnpitchko/.cargo/bin:$PATH"
 
 #--------------------------------------------------------------------#
 #                               Redis                                #
