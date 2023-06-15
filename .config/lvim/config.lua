@@ -3,9 +3,10 @@
  `lvim` is the global options object
 ]]
 -- vim options
+vim.opt.colorcolumn = "80"
+vim.opt.relativenumber = false
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.relativenumber = true
 
 -- general
 lvim.log.level = "info"
@@ -45,6 +46,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.view.width = 50
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
@@ -61,6 +63,7 @@ lvim.builtin.telescope.theme = "center"
 
 -- --- disable automatic installation of servers
 -- lvim.lsp.installer.setup.automatic_installation = false
+lvim.lsp.installer.setup.automatic_installation.exclude = { "standardrb" }
 
 -- ---configure a server manually. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
@@ -73,7 +76,6 @@ lvim.builtin.telescope.theme = "center"
 -- lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
 --   return server ~= "emmet_ls"
 -- end, lvim.lsp.automatic_configuration.skipped_servers)
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "standardrb" })
 -- -- you can set a custom on_attach function that will be used for all the language servers
 -- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
@@ -87,11 +89,14 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "standardrb"
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "rubocop", filetypes = { "ruby" } },
+  { command = "rubocop",        filetypes = { "ruby" } },
+  { command = "htmlbeautifier", filetypes = { "eruby" } }
 }
+
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "rubocop", filetypes = { "ruby" } },
+  -- Disable rubocop to prevent double-linting (solargraph also does linting it seems).
+  -- { command = "rubocop", filetypes = { "ruby" } },
 }
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
