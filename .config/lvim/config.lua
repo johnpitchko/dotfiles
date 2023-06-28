@@ -59,6 +59,13 @@ lvim.builtin.treesitter.auto_install = true
 -- -- Telescope
 lvim.builtin.telescope.theme = "center"
 
+lvim.builtin.telescope.defaults = {
+  -- use fd to "find files" and return absolute paths
+  find_command = { "fd", "-t=f", "-a" },
+  path_display = { "absolute" },
+  wrap_results = true
+}
+
 -- -- generic LSP settings <https://www.lunarvim.org/docs/languages#lsp-support>
 
 -- --- disable automatic installation of servers
