@@ -97,7 +97,7 @@ lvim.lsp.installer.setup.automatic_installation.exclude = { "standardrb" }
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "rubocop",        filetypes = { "ruby" } },
-  { command = "htmlbeautifier", filetypes = { "eruby" } }
+  { command = "htmlbeautifier", args = { "-b", "1" },  filetypes = { "eruby" } }
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
