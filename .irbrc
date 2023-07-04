@@ -2,12 +2,14 @@ begin
   require 'irb'
   require 'rainbow'
   require 'rubygems'
-  require 'amazing_print'
+  # require 'amazing_print'
 rescue LoadError => e
-  puts "ERROR: Could not load gem #{e}".yellow
+  puts "ERROR: Could not load gem #{e}"
 end
 
-AmazingPrint.irb!
+# TODO: fix delegation to enable AmazingPrint again
+# https://github.com/awesome-print/awesome_print/issues/339#issuecomment-790004674
+# AmazingPrint.irb!
 
 IRB.conf[:USE_AUTOCOMPLETE] = false
 IRB.conf[:ECHO_ON_ASSIGNMENT] = true
