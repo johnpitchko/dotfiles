@@ -59,6 +59,13 @@ lvim.builtin.treesitter.auto_install = true
 -- -- Telescope
 lvim.builtin.telescope.theme = "center"
 
+lvim.builtin.telescope.defaults = {
+  -- use fd to "find files" and return absolute paths
+  find_command = { "fd", "-t=f", "-a" },
+  path_display = { "absolute" },
+  wrap_results = true
+}
+
 -- -- generic LSP settings <https://www.lunarvim.org/docs/languages#lsp-support>
 
 -- --- disable automatic installation of servers
@@ -90,7 +97,7 @@ lvim.lsp.installer.setup.automatic_installation.exclude = { "standardrb" }
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "rubocop",        filetypes = { "ruby" } },
-  { command = "htmlbeautifier", filetypes = { "eruby" } }
+  { command = "htmlbeautifier", args = { "-b", "1" },  filetypes = { "eruby" } }
 }
 
 local linters = require "lvim.lsp.null-ls.linters"

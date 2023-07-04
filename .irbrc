@@ -1,4 +1,5 @@
 begin
+  require 'amazing_print'
   require 'irb'
   require 'rainbow'
   require 'rubygems'
@@ -11,8 +12,9 @@ end
 # https://github.com/awesome-print/awesome_print/issues/339#issuecomment-790004674
 # AmazingPrint.irb!
 
-IRB.conf[:USE_AUTOCOMPLETE] = false
 IRB.conf[:ECHO_ON_ASSIGNMENT] = true
+IRB.conf[:USE_AUTOCOMPLETE] = false
+IRB.conf[:SAVE_HISTORY] = false if Rails.env.production?
 IRB.conf[:USE_MULTILINE] = false
 
 # Add color coding based on Rails environment for safety
