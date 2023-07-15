@@ -6,7 +6,8 @@ colors
 docs
 ftplugin
 ginit.vim
-lua/user
+# Allow user configuration to be tracked in repo
+# lua/user
 neoconf.json
 plugin
 queries
