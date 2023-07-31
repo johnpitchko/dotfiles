@@ -16,7 +16,9 @@ alias exa='exa --long --header --git'																				# Show exa output in lo
 alias fs='foreman start -f Procfile'																				# Start Wingman
 alias grep='grep --color=auto'                  													  # Make grep pretty
 alias jekyll-up='bundle exec jekyll serve --drafts'
-alias ll="ls -lah"
+# alias ll="ls -lah"
+alias ll="lsd"
+alias lsd="lsd -l"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
 
 # Neovim aliases
