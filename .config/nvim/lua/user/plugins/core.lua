@@ -27,6 +27,12 @@ return {
         width = 50,
       }
     }
+  },
+  {
+   "threedaymonk/htmlbeautifier",
+    args = {
+      "-b", "1"
+    }
   }
 
   -- You can disable default plugins as follows:
