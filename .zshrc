@@ -9,16 +9,15 @@
 setopt autocd
 
 # Alias to quickly edit zsh config
-alias zshconfig="lvim ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 
 alias exa='exa --long --header --git'																				# Show exa output in long format with headers and Git info
 alias fs='foreman start -f Procfile'																				# Start Wingman
 alias grep='grep --color=auto'                  													  # Make grep pretty
-alias jekyll-up='bundle exec jekyll serve --drafts'
 # alias ll="ls -lah"
 alias ll="lsd"
-alias lsd="lsd -l"
+alias lsd="lsd -lah"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
 
 # Neovim aliases
@@ -47,6 +46,9 @@ alias chord-oms-staging="heroku run 'rails c' --app chord-oms-staging"
 alias chord-oms-prod="heroku run 'rails c' --app chord-oms-prod"
 alias bbc-oms-staging="heroku run 'rails c' --app bbc-oms-staging"
 alias bbc-oms-prod="heroku run 'rails c' --app bbc-oms-prod"
+
+# Gammafly
+alias gammafly-prod='ssh srv-cg4u6andvk4n2c19f8h0@ssh.oregon.render.com'
 
 #--------------------------------------------------------------------#
 #                              vim/Neovim/Lunarvim                   #
