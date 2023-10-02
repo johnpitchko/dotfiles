@@ -11,4 +11,7 @@ return {
       },
     },
   },
+  -- { "tpope/vim-endwise" },
+  -- { "tpope/vim-rails" },
+  -- { "vim-ruby/vim-ruby" },
 }
