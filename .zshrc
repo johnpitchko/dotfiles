@@ -115,6 +115,14 @@ export CPPFLAGS="-I$BREW_PATH/opt/postgresql@13/include"
 export PKG_CONFIG_PATH="$BREW_PATH/opt/postgresql@13/lib/pkgconfig"
 
 ###############################################################################
+## mysql
+###############################################################################
+export PATH="$BREW_PATH/opt/mysql@8.0/bin:$PATH"
+export LDFLAGS="-L$BREW_PATH/opt/mysql@8.0/lib"
+export CPPFLAGS="-I$BREW_PATH/opt/mysql@8.0/include"
+export PKG_CONFIG_PATH="$BREW_PATH/opt/mysql@8.0/lib/pkgconfig"
+
+###############################################################################
 ## Node
 ###############################################################################
 export PATH="$BREW_PATH/opt/node@16/bin:$PATH"
