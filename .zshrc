@@ -18,6 +18,8 @@ alias grep='grep --color=auto'                  													  # Make grep prett
 alias ll="lsd"
 alias lsd="lsd -lah"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
+alias nvimconfig='nvim ~/.config/nvim'
+alias kittyconfig='nvim ~/.config/kitty'
 alias vi='nvim'
 alias vim='nvim'
 
