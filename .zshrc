@@ -20,6 +20,8 @@ alias lsd="lsd -lah"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
 alias nvimconfig='nvim ~/.config/nvim'
 alias kittyconfig='nvim ~/.config/kitty'
+# Fix backspaces not working when ssh'ing to a server
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 alias vi='nvim'
 alias vim='nvim'
 
