@@ -15,6 +15,7 @@ alias zshsource="source ~/.zshrc"
 alias exa='exa --long --header --git'																				# Show exa output in long format with headers and Git info
 alias fs='foreman start -f Procfile'																				# Start Rails w/ Foreman
 alias grep='grep --color=auto'                  													  # Make grep pretty
+alias lg='lazygit'
 alias ll="lsd"
 alias lsd="lsd -lah"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
