@@ -45,6 +45,8 @@ alias gad='git add'
 alias cd-chord='cd ~/Code/chord-oms'
 alias chord-oms-staging="heroku run 'rails c' --app chord-oms-staging"
 alias chord-oms-prod="heroku run 'rails c' --app chord-oms-prod"
+alias chord-heroku-staging="heroku run '/bin/bash' --app chord-oms-staging"
+alias chord-heroku-prod="heroku run '/bin/bash' --app chord-oms-prod"
 alias bbc-oms-staging="heroku run 'rails c' --app bbc-oms-staging"
 alias bbc-oms-prod="heroku run 'rails c' --app bbc-oms-prod"
 
