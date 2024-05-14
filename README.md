@@ -1,14 +1,16 @@
-# Dotfiles
+# John Pitchko's Dotfiles
 
-Various configuration files and stuff.
+Managed via [Dotbot](https://github.com/anishathalye/dotbot).
 
-This is sorta half-baked. No auto-installer so you probably have to do it manually.
+# Installation
 
-Just use `ln -s <source file> <target file>` to link the file in this directory to wherever it needs to be.
+1. Clone this repo into `~/.dotfiles`.
+2. Run the install script, which should first install Dotbot then create the specified folders, symlinks, etc...
+```
+$ ./install
+```
 
-So like `ln -s ~/Code/.dotfiles/.config/nvim ~/.config/nvim`
-
-# Misc notes
+# Requirements
 
 - Binaries required/recommended to install via Homebrew:
 

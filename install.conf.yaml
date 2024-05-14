@@ -1,0 +1,11 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.irbrc: irbrc
+    ~/.zshrc:
+      force: true
+      path: zshrc
