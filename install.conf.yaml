@@ -5,6 +5,12 @@
 - clean: ['~']
 
 - link:
+    ~/.config/nvim:
+      create: true
+      path: config/nvim
+    ~/.config/kitty:
+      create: true
+      path: config/kitty
     ~/.irbrc: irbrc
     ~/.zshrc:
       force: true
