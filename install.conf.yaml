@@ -11,6 +11,9 @@
     ~/.config/kitty:
       create: true
       path: config/kitty
+    ~/.config/yarn:
+      create: true
+      path: config/yarn
     ~/.irbrc: irbrc
     ~/.zshrc:
       force: true
