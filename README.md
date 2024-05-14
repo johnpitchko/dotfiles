@@ -1,6 +1,6 @@
 # John Pitchko's Dotfiles
 
-Managed via [Dotbot](https://github.com/anishathalye/dotbot).
+Managed via [Dotbot](https://github.com/anishathalye/dotbot) with the [dotbot-brew](https://github.com/d12frosted/dotbot-brew) plugin.
 
 # Installation
 
