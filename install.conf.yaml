@@ -9,3 +9,31 @@
     ~/.zshrc:
       force: true
       path: zshrc
+
+- brew:
+  - httpie
+  - lazygit
+  - neovim
+  - nodenv
+  - postgresql@15
+  - rbenv
+  - redis@6.2
+  - ripgrep
+  - starship
+  - tree-sitter
+
+
+- cask:
+  - 1password
+  - docker
+  - discord
+  - firefox
+  - font-symbols-only-nerd-font
+  - insomnia
+  - kitty
+  - notion
+  - rectangle
+  - skitch
+  - slack
+  - tableplus
+  - textmate
