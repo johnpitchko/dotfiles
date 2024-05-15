@@ -133,9 +133,6 @@ export PATH="$BREW_PATH/opt/node@16/bin:$PATH"
 export LDFLAGS="-L$BREW_PATH/opt/node@16/lib"
 export CPPFLAGS="-I$BREW_PATH/opt/node@16/include"
 
-# For nodenv
-eval "$(nodenv init -)"
-
 ###############################################################################
 ## Stripe CLI
 ###############################################################################
