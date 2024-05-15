@@ -15,15 +15,18 @@
       create: true
       path: config/yarn
     ~/.irbrc: irbrc
+    ~/.zprofile:
+      force: true
+      path: zprofile
     ~/.zshrc:
       force: true
       path: zshrc
 
 - brew:
+  - asdf
   - httpie
   - lazygit
   - neovim
-  - nodenv
   - postgresql@15
   - redis@6.2
   - ripgrep
