@@ -78,15 +78,11 @@ export PATH="/usr/local/sbin:$PATH"
 export BREW_PATH=$(brew --prefix)
 
 ###############################################################################
-## rbenv
+## Ruby
 ###############################################################################
 
 # Link Rubies to Homebrew's OpenSSL 1.1 instead of 3.x (directed from rbenv install)
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-# Load rbenv automatically by appending the following to ~/.zshrc:
-eval "$(rbenv init -)"
 
 ###############################################################################
 ## python@3.x

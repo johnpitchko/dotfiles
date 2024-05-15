@@ -25,7 +25,6 @@
   - neovim
   - nodenv
   - postgresql@15
-  - rbenv
   - redis@6.2
   - ripgrep
   - starship
