@@ -77,6 +77,20 @@ export PATH="/usr/local/sbin:$PATH"
 # Necessary because Homebrew installs packages to different directories on Intel and ARM computers!
 export BREW_PATH=$(brew --prefix)
 
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+
+# asdf
+. $(brew --prefix asdf)/libexec/asdf.sh
+# $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+
 ###############################################################################
 ## Ruby
 ###############################################################################
@@ -152,12 +166,6 @@ export PATH="$BREW_PATH/opt/redis@6.2/bin:$PATH"
 ## Bison
 export PATH="$BREW_PATH/opt/bison/bin:$PATH"
 export LDFLAGS="-L$BREW_PATH/opt/bison/lib"
-
-#  ╭──────────────────────────────────────────────────────────────────────────────╮
-#  │                                  For Heroku                                  │
-#  ╰──────────────────────────────────────────────────────────────────────────────╯
-
-FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
 ## Starship
 # Must be last line in .zshrc!
