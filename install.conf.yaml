@@ -5,12 +5,13 @@
 - clean: ['~']
 
 - link:
-    ~/.config/nvim:
-      create: true
-      path: config/nvim
     ~/.config/kitty:
       create: true
       path: config/kitty
+    ~/.config/nvim:
+      create: true
+      path: config/nvim
+    ~/.config/.rubocop.yml: config/rubocop/default.yml
     ~/.config/yarn:
       create: true
       path: config/yarn
