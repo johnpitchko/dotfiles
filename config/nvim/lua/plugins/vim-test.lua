@@ -1,6 +1,7 @@
 return {
   {
     "vim-test/vim-test",
+    name = "vim-test",
     keys = {
       {
         "<leader>Tt",
