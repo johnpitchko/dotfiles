@@ -3539,7 +3539,7 @@ Style/DocumentDynamicEvalDefinition:
 
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.9'
   AllowedConstants: []
   Exclude:
@@ -3630,7 +3630,7 @@ Style/EmptyLiteral:
 Style/EmptyMethod:
   Description: 'Checks the formatting of empty method definitions.'
   StyleGuide: '#no-single-line-methods'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.46'
   EnforcedStyle: compact
   SupportedStyles:
