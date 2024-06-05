@@ -43,8 +43,8 @@ alias gad='git add'
 
 # Chord
 alias cd-chord='cd ~/Code/chord-oms'
-alias chord-oms-staging="heroku run 'rails c' --app chord-oms-staging"
-alias chord-oms-prod="heroku run 'rails c' --app chord-oms-prod"
+alias chord-oms-staging="heroku run 'rails c -- --nomultiline' --app chord-oms-staging"
+alias chord-oms-prod="heroku run 'rails c -- --nomultiline' --app chord-oms-prod"
 alias chord-heroku-staging="heroku run '/bin/bash' --app chord-oms-staging"
 alias chord-heroku-prod="heroku run '/bin/bash' --app chord-oms-prod"
 alias bbc-oms-staging="heroku run 'rails c' --app bbc-oms-staging"
@@ -96,7 +96,7 @@ fi
 ###############################################################################
 
 # Link Rubies to Homebrew's OpenSSL 1.1 instead of 3.x (directed from rbenv install)
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 ###############################################################################
 ## python@3.x
