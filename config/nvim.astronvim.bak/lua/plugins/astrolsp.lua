@@ -33,7 +33,7 @@ return {
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 5000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
@@ -46,6 +46,14 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      ruby_lsp = {
+        -- cmd = { 'ruby-lsp' },
+        on_attach = function(client, buffer)
+          -- client.server_capabilities.semanticTokensProvider = nil
+          -- setup_diagnostics(client, buffer)
+          -- add_ruby_deps_command(client, buffer)
+        end,
+      },
     },
     -- customize how language servers are attached
     handlers = {
