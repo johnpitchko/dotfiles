@@ -15,6 +15,9 @@
     ~/.config/yarn:
       create: true
       path: config/yarn
+    ~/.bundle/config:
+      create: true
+      path: bundle/config
     ~/.irbrc: irbrc
     ~/.zprofile:
       force: true
