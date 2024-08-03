@@ -33,6 +33,7 @@ alias mv="mv -v"
 # Ruby/Rails
 alias rspec='bundle exec rspec'
 alias rc='stty sane && bundle exec rails c'
+alias sidekiq='bundle exec sidekiq'
 
 # Git
 alias glog='git log --graph --decorate --pretty=oneline --abbrev-commit'	# Show a cool graph of git commit history
