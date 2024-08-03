@@ -18,6 +18,7 @@
     ~/.bundle/config:
       create: true
       path: bundle/config
+    ~/.default-gems: default-gems
     ~/.irbrc: irbrc
     ~/.zprofile:
       force: true
@@ -45,7 +46,6 @@
   - kitty
   - notion
   - rectangle
-  - skitch
   - slack
   - tableplus
   - textmate
