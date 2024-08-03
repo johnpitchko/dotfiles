@@ -31,12 +31,9 @@
   - httpie
   - lazygit
   - neovim
-  - postgresql@15
-  - redis@6.2
   - ripgrep
   - starship
   - tree-sitter
-
 
 - cask:
   - 1password
