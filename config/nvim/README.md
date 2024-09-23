@@ -18,8 +18,11 @@ return {
 }
 ```
 
+## Ruby LSP
 
-## Creating LSP harmony with version managers and Lazyvim
+As of version 12.xxxx, the 'default' LSP for Ruby was set to `ruby-lsp`.
+
+## Creating LSP harmony with runtime managers (asdf) and Lazyvim
 
 Lazyvim includes a plugin called Mason for installing tools like LSPs, formatters, linters, etc... Tools installed via Mason will be placed within the Mason package directory (`~/.local/share/nvim/mason/packages`).
 
@@ -27,16 +30,11 @@ Conflict arises when using version managers, such as `asdf`, or when installing 
 
 1. _Do not_ install tools with Mason if those tools will be used by version-managed software.
 2. Install those tools as packages in each version. asdf is great for this because it can install default gems whenever a new version of a language is installed.
-
-## Instructions 
-
-1. Perform default install/clone.
-2. Install `ruby_lsp` via Mason (`:Mason`). Verify it was installed correctly by opening a `.rb` file and running `:LspInfo` to verify that `ruby_lsp` is running and attached to the buffer. If it says '0 clients attached to buffer' then something is not right.
-
-Further test that core actions like formatting-on-save work by mucking up some of the file formatting (such as by indenting some lines various excessive amounts), saving the buffer, and confirming the file was reformatted properly.
+3. Prevent Mason from 
 
 ## Customizations
 
 1. Replaced minisurround with vim-surround.
 2. Disabled minipairs (annoying).
 3. Added vim-test.
+4. Prevented Mason from auto-installing its own version of `ruby-lsp` and `rubocop`.

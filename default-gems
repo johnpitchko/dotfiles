@@ -1,5 +1,7 @@
 amazing_print
+annotate
 bundler
 debug
 htmlbeautifier
 rubocop
+ruby-lsp

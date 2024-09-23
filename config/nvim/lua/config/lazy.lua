@@ -16,6 +16,8 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
+    -- Enable the 'LazyExtras' built-in configuration and plugins for Ruby: https://www.lazyvim.org/extras/lang/ruby
+    { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "plugins" },
   },
   defaults = {

@@ -3,9 +3,10 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        -- Enables Rubocop magically just by including this line!
+        ruby_lsp = {
+          mason = false,
+        },
         rubocop = {
-          -- Do NOT install this server via Mason!
           mason = false,
         },
       },
