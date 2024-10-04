@@ -5,3 +5,4 @@
 local opt = vim.opt
 
 opt.relativenumber = false -- Relative line numbers
+opt.colorcolumn = "80,120"
