@@ -19,8 +19,8 @@ alias lg='lazygit'
 alias ll="lsd"
 alias lsd="lsd -lah"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
-alias nvimconfig='nvim ~/.config/nvim'
-alias kittyconfig='nvim ~/.config/kitty'
+alias nvimconf='nvim ~/.config/nvim'
+alias kittyconf='nvim ~/.config/kitty'
 # Fix backspaces not working when ssh'ing to a server
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 alias vi='nvim'
@@ -29,6 +29,10 @@ alias vim='nvim'
 # Make commands verbose
 alias cp="cp -v"
 alias mv="mv -v"
+
+# AWS
+# Set 'default' AWS profile; refer to ~/.aws/config for list of profiles
+export AWS_PROFILE="dev-poweruser"
 
 # Ruby/Rails
 alias rspec='bundle exec rspec'
@@ -52,10 +56,6 @@ alias bbc-oms-staging="heroku run 'rails c -- --noautocomplete' --app bbc-oms-st
 alias bbc-oms-prod="heroku run 'rails c -- --noautocomplete' --app bbc-oms-prod"
 alias bbc-oms-prod-sandbox="heroku run 'rails c -- --sandbox --noautocomplete' --app bbc-oms-prod"
 alias hub-backend-staging="heroku run 'rails c -- --noautocomplete' --app hub-backend-staging"
-
-# Gammafly
-alias cd-gammafly='cd ~/Code/gammafly'
-alias gammafly-prod='ssh srv-cg4u6andvk4n2c19f8h0@ssh.oregon.render.com'
 
 export VISUAL=nvim
 
