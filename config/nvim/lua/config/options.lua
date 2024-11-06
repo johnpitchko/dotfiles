@@ -26,4 +26,4 @@ opt.termguicolors = true 				                        -- True color support
 opt.undofile = true
 opt.undolevels = 10000
 opt.virtualedit = "block" 				                      -- Allow cursor to move where there is no text in visual block mode
-opt.wrap = true                               					-- Enable line wrap
+opt.wrap = false                               					-- Disable line wrap
