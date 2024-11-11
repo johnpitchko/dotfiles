@@ -29,4 +29,8 @@ return {
     { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (Root Dir)", remap = true },
     { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
   }
+  },
+  opts = {
+    close_if_last_window = true
+  },
 }
