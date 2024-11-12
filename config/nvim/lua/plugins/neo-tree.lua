@@ -15,22 +15,22 @@ return {
   -- Not sure the difference between this function and the one below, so I overwrote it so they are the same.
   -- I _think_ #root function maps to somewhere within LazyVim's `lua/lazyvim/util/root.lua` file.
   -- require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
-  require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
+        require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
       end,
       desc = "Explorer NeoTree (Root Dir)",
     },
     {
       "<leader>fE",
       function()
-  require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
+        require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
       end,
       desc = "Explorer NeoTree (cwd)",
     },
     { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (Root Dir)", remap = true },
     { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
-  }
   },
   opts = {
-    close_if_last_window = true
+    close_if_last_window = true,
+    popup_border_style = "rounded"  -- fixes top half of popup menu from being cutof
   },
 }
