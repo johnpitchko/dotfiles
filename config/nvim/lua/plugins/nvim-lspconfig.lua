@@ -15,9 +15,6 @@ return {
       },
     })
 
-    lspconfig.eslint.setup({
-      cmd = { "vscode-eslint-language-server", "--stdio" },
-    })
     lspconfig.html.setup({})
     lspconfig.lua_ls.setup({})
     lspconfig.quick_lint_js.setup({})
