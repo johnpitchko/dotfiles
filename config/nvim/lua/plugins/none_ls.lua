@@ -13,8 +13,10 @@ return {
       sources = {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.htmlbeautifier.with({
+          -- Allow max one blank line in ERB files
           extra_args = { "-b", "1" }
         }),
+        null_ls.builtins.formatting.terraform_fmt,
         -- null_ls.builtins.formatting.stylua,
         null_ls.builtins.completion.spell,
         -- require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
