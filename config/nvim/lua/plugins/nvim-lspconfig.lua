@@ -20,5 +20,11 @@ return {
     lspconfig.lua_ls.setup({})
     lspconfig.quick_lint_js.setup({})
     lspconfig.terraformls.setup({})
-  end
+  end,
+  keys = {
+    { "<leader>l",  group = "lsp",         desc = "LSPs & formatters" },
+    { "<leader>ln", "<cmd>NullLsInfo<cr>", desc = 'NullLs Info' },
+    { "<leader>ll", "<cmd>LspInfo<cr>",    desc = 'LSP info' },
+    { "<leader>lo", "<cmd>LspLog<cr>",     desc = 'LSP log' },
+  }
 }
