@@ -19,5 +19,6 @@ return {
     lspconfig.html.setup({})
     lspconfig.lua_ls.setup({})
     lspconfig.quick_lint_js.setup({})
+    lspconfig.terraformls.setup({})
   end
 }
