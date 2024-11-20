@@ -6,6 +6,7 @@
 -- Use `:NullLsInfo` to show which formatters are attached to the buffer
 return {
   "nvimtools/none-ls.nvim",
+  enabled = false,
   init = function()
     local null_ls = require("null-ls")
 
