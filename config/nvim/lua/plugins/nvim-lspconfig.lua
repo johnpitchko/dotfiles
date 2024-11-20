@@ -1,6 +1,9 @@
 -- Available LSPs: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 -- Default options for all LSPs: https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/configs
 -- Follow the instructions in the file above to install the LSP, _then_ enable the LSP within Neovim below.
+--
+-- Troubleshooting
+-- LSP not attaching to buffer: could be an issue if `root_dir` is not set
 
 return {
   "neovim/nvim-lspconfig",
