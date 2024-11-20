@@ -9,7 +9,7 @@
 setopt autocd
 
 # Alias to quickly edit zsh config
-alias zshconfig="nvim ~/.zshrc"
+alias zshconf="nvim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 
 alias exa='exa --long --header --git'																				# Show exa output in long format with headers and Git info
@@ -19,7 +19,7 @@ alias lg='lazygit'
 alias ll="lsd"
 alias lsd="lsd -lah"
 alias myip='curl http://ipecho.net/plain; echo' 														# Print your current public IP address
-alias nvimconf='nvim ~/.config/nvim'
+alias nvimconf='nvim ~/.config/nvim/init.lua'
 alias kittyconf='nvim ~/.config/kitty'
 # Fix backspaces not working when ssh'ing to a server
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
