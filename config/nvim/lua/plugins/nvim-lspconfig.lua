@@ -24,10 +24,10 @@ return {
     lspconfig.quick_lint_js.setup({})
     lspconfig.terraformls.setup({})
   end,
-  keys = {
-    { "<leader>l",  group = "lsp",         desc = "LSPs & formatters" },
-    { "<leader>ln", "<cmd>NullLsInfo<cr>", desc = 'NullLs Info' },
-    { "<leader>ll", "<cmd>LspInfo<cr>",    desc = 'LSP info' },
-    { "<leader>lo", "<cmd>LspLog<cr>",     desc = 'LSP log' },
-  }
+  -- keys = {
+  --   { "<leader>l",  group = "lsp",         desc = "LSPs & formatters" },
+  --   { "<leader>ln", "<cmd>NullLsInfo<cr>", desc = 'NullLs Info' },
+  --   { "<leader>ll", "<cmd>LspInfo<cr>",    desc = 'LSP info' },
+  --   { "<leader>lo", "<cmd>LspLog<cr>",     desc = 'LSP log' },
+  -- }
 }
