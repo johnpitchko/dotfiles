@@ -15,8 +15,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- Unfold all code after reading a file into a buffer. Necessary because
 -- TreeSitter will automatically fold all code when opening a buffer.
 -- Source: https://www.jmaguire.tech/posts/treesitter_folding/
-vim.api.nvim_create_autocmd("BufReadPost", {
-  callback = function()
-    vim.cmd("normal zR")
-  end
-})
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+--   callback = function()
+--     vim.cmd("normal zR")
+--   end
+-- })
+
+-- Unfold all code after reading a file into a buffer. Necessary because
+-- TreeSitter will automatically fold all code when opening a buffer.
+-- Source: https://www.jmaguire.tech/posts/treesitter_folding/
+-- vim.api.nvim_create_autocmd("FileReadPost", {
+--   callback = function()
+--     vim.cmd("normal zR")
+--   end
+-- })
