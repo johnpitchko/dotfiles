@@ -10,6 +10,7 @@ opt.colorcolumn = "80"
 opt.confirm = true                                      -- Confirm to save changes before exiting modified buffer
 opt.cursorline = true                                   -- Enable highlighting of the current line
 opt.expandtab = true                                    -- Use spaces instead of tabs
+opt.foldlevel = 20                                      -- Expand all folds when file opens
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.number = true         -- Show line numbers; can be false if `relativenumber` enabled.
