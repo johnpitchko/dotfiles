@@ -17,6 +17,8 @@ return {
         formatter = 'rubocop',
         linters = { 'rubocop' },
       },
+      -- Disable for eruby filetype due to noise and incorrect linting
+      filetypes = { 'ruby' }
     })
 
     lspconfig.html.setup({})
