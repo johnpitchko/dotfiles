@@ -49,13 +49,19 @@ alias gad='git add'
 # Chord
 alias cd-chord='cd ~/Code/chord-oms'
 alias chord-oms-staging="heroku run 'rails c -- --noautocomplete' --app chord-oms-staging"
-alias chord-oms-prod="heroku run 'rails c -- --noautocomplete' --app chord-oms-prod"
+# alias chord-oms-prod="heroku run 'rails c -- --noautocomplete' --app chord-oms-prod"
+alias chord-oms-prod="heroku run 'rails c' --app chord-oms-prod"
 alias chord-heroku-staging="heroku run '/bin/bash' --app chord-oms-staging"
 alias chord-heroku-prod="heroku run '/bin/bash' --app chord-oms-prod"
 alias bbc-oms-staging="heroku run 'rails c -- --noautocomplete' --app bbc-oms-staging"
 alias bbc-oms-prod="heroku run 'rails c -- --noautocomplete' --app bbc-oms-prod"
 alias bbc-oms-prod-sandbox="heroku run 'rails c -- --sandbox --noautocomplete' --app bbc-oms-prod"
 alias hub-backend-staging="heroku run 'rails c -- --noautocomplete' --app hub-backend-staging"
+
+## Chord CDP
+alias cdp-dev="cd ~/Code/cdp/environments/development && export AWS_PROFILE=dev-administrator && aws sso login"
+alias cdp-staging="cd ~/Code/cdp/environments/staging && export AWS_PROFILE=staging-administrator && aws sso login"
+alias cdp-prod="cd ~/Code/cdp/environments/production && export AWS_PROFILE=prod-administrator && aws sso login"
 
 export VISUAL=nvim
 
@@ -100,6 +106,9 @@ fi
 
 # Link Rubies to Homebrew's OpenSSL 1.1 instead of 3.x (directed from rbenv install)
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# Disable Spring
+export DISABLE_SPRING=1
 
 ###############################################################################
 ## python@3.x
