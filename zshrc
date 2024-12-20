@@ -179,6 +179,9 @@ export PATH="$BREW_PATH/opt/redis@6.2/bin:$PATH"
 export PATH="$BREW_PATH/opt/bison/bin:$PATH"
 export LDFLAGS="-L$BREW_PATH/opt/bison/lib"
 
+# direnv
+eval "$(direnv hook zsh)"
+
 ## Starship
 # Must be last line in .zshrc!
 eval "$(starship init zsh)"

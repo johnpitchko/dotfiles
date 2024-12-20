@@ -29,6 +29,7 @@
 
 - brew:
   - asdf
+  - direnv
   - httpie
   - lazygit
   - neovim
