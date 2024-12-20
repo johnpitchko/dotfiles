@@ -3,6 +3,7 @@
   "fzf-lua": { "branch": "main", "commit": "7de67daddd5d4cd7757481d5fdc2a879b7ced1ad" },
   "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
   "lazygit.nvim": { "branch": "main", "commit": "77a0d42943d8265271e6e6beaed72da54eeb17e7" },
+  "lualine.nvim": { "branch": "master", "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "a77af2e764c5ed4038d27d1c463fa49cd4794e07" },
   "none-ls.nvim": { "branch": "main", "commit": "40dc2e983560acaea29d6312b33fafba37b0c272" },
   "nui.nvim": { "branch": "main", "commit": "53e907ffe5eedebdca1cd503b00aa8692068ca46" },
