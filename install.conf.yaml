@@ -11,15 +11,25 @@
     ~/.config/nvim:
       create: true
       path: config/nvim
-    ~/.config/.rubocop.yml: config/rubocop/default.yml
+    ~/.config/lazyvim:
+      create: true
+      path: config/lazyvim
+    ~/.config/.rubocop.yml:
+      create: true
+      path: config/rubocop/default.yml
     ~/.config/yarn:
       create: true
       path: config/yarn
     ~/.bundle/config:
       create: true
       path: bundle/config
-    ~/.default-gems: default-gems
-    ~/.irbrc: irbrc
+    ~/.default-gems:
+      path: default-gems
+    ~/.irbrc:
+      path: irbrc
+    ~/.tmux.conf:
+      path: tmux.conf
+      create: true
     ~/.zprofile:
       force: true
       path: zprofile
@@ -29,6 +39,7 @@
 
 - brew:
   - asdf
+  - bash-language-server
   - direnv
   - httpie
   - lazygit
