@@ -5,34 +5,38 @@
 - clean: ['~']
 
 - link:
-    ~/.config/kitty:
-      create: true
-      path: files/config/kitty
-    ~/.config/lazyvim:
-      create: true
-      path: files/config/lazyvim
-    ~/.config/.rubocop.yml:
-      create: true
-      path: files/config/rubocop/default.yml
-    ~/.config/yarn:
-      create: true
-      path: files/config/yarn
-    ~/.bundle/config:
-      create: true
-      path: files/bundle/config
-    ~/.default-gems:
-      path: files/default-gems
-    ~/.irbrc:
-      path: files/irbrc
-    ~/.tmux.conf:
-      path: files/tmux.conf
-      create: true
-    ~/.zprofile:
-      force: true
-      path: files/zprofile
-    ~/.zshrc:
-      force: true
-      path: files/zshrc
+  # Terminal config
+  ~/.tmux.conf:
+    path: files/tmux.conf
+  ~/.zprofile:
+    force: true
+    path: files/zprofile
+  ~/.zshrc:
+    force: true
+    path: files/zshrc
+
+  ~/.config/kitty:
+    create: true
+    path: files/config/kitty
+
+  # Ruby
+  ~/.rubocop.yml:
+    path: files/config/rubocop/default.yml
+  ~/.default-gems:
+    path: files/default-gems
+  ~/.irbrc:
+    path: files/irbrc
+  ~/.bundle/config:
+    create: true
+    path: files/bundle/config
+
+  # Coding and misc
+  ~/.config/lazyvim:
+    create: true
+    path: files/config/lazyvim
+  ~/.config/yarn:
+    create: true
+    path: files/config/yarn
 
 - brew:
   - asdf
@@ -47,11 +51,11 @@
 
 - cask:
   - 1password
+  - bruno
   - docker
   - discord
   - firefox
   - font-symbols-only-nerd-font
-  - insomnia
   - kitty
   - notion
   - rectangle
