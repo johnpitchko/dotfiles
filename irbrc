@@ -1,5 +1,4 @@
 begin
-  require 'amazing_print'
   require 'irb'
   require 'rainbow'
   require 'rubygems'
