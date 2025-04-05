@@ -7,35 +7,32 @@
 - link:
     ~/.config/kitty:
       create: true
-      path: config/kitty
-    ~/.config/nvim:
-      create: true
-      path: config/nvim
+      path: files/config/kitty
     ~/.config/lazyvim:
       create: true
-      path: config/lazyvim
+      path: files/config/lazyvim
     ~/.config/.rubocop.yml:
       create: true
-      path: config/rubocop/default.yml
+      path: files/config/rubocop/default.yml
     ~/.config/yarn:
       create: true
-      path: config/yarn
+      path: files/config/yarn
     ~/.bundle/config:
       create: true
-      path: bundle/config
+      path: files/bundle/config
     ~/.default-gems:
-      path: default-gems
+      path: files/default-gems
     ~/.irbrc:
-      path: irbrc
+      path: files/irbrc
     ~/.tmux.conf:
-      path: tmux.conf
+      path: files/tmux.conf
       create: true
     ~/.zprofile:
       force: true
-      path: zprofile
+      path: files/zprofile
     ~/.zshrc:
       force: true
-      path: zshrc
+      path: files/zshrc
 
 - brew:
   - asdf
