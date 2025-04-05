@@ -2,6 +2,6 @@ amazing_print
 annotaterb
 bundler
 debug
-htmlbeautifier
+erb-formatter
 rubocop
 ruby-lsp
