@@ -1,64 +1,58 @@
 - defaults:
     link:
       relink: true
-
-- clean: ['~']
-
+- clean: ["~"]
 - link:
-  # Terminal config
-  ~/.tmux.conf:
-    path: files/tmux.conf
-  ~/.zprofile:
-    force: true
-    path: files/zprofile
-  ~/.zshrc:
-    force: true
-    path: files/zshrc
-
-  ~/.config/kitty:
-    create: true
-    path: files/config/kitty
-
-  # Ruby
-  ~/.rubocop.yml:
-    path: files/config/rubocop/default.yml
-  ~/.default-gems:
-    path: files/default-gems
-  ~/.irbrc:
-    path: files/irbrc
-  ~/.bundle/config:
-    create: true
-    path: files/bundle/config
-
-  # Coding and misc
-  ~/.config/lazyvim:
-    create: true
-    path: files/config/lazyvim
-  ~/.config/yarn:
-    create: true
-    path: files/config/yarn
-
+    # Terminal config
+    ~/.config/starship.toml:
+      path: files/config/starship.toml
+    ~/.zprofile:
+      force: true
+      path: files/zprofile
+    ~/.zshrc:
+      force: true
+      path: files/zshrc
+    # Ruby
+    ~/.bundle/config:
+      create: true
+      path: files/bundle/config
+    ~/.rubocop.yml:
+      path: files/config/rubocop/default.yml
+    ~/.default-gems:
+      path: files/default-gems
+    ~/.irbrc:
+      path: files/irbrc
+    ~/.tmux.conf:
+      path: files/tmux.conf
+    ~/.config/kitty:
+      create: true
+      path: files/config/kitty
+    ~/.config/lazyvim:
+      create: true
+      path: files/config/lazyvim
+    ~/.config/yarn:
+      create: true
+      path: files/config/yarn
 - brew:
-  - asdf
-  - bash-language-server
-  - direnv
-  - httpie
-  - lazygit
-  - neovim
-  - ripgrep
-  - starship
-  - tree-sitter
-
+    - asdf
+    - bash-language-server
+    - direnv
+    - httpie
+    - lazygit
+    - neovim
+    - ripgrep
+    - starship
+    - tree-sitter
 - cask:
-  - 1password
-  - bruno
-  - docker
-  - discord
-  - firefox
-  - font-symbols-only-nerd-font
-  - kitty
-  - notion
-  - rectangle
-  - slack
-  - tableplus
-  - textmate
+    - 1password
+    - docker
+    - discord
+    - firefox
+    - font-symbols-only-nerd-font
+    - insomnia
+    - kitty
+    - notion
+    - rectangle
+    - slack
+    - tableplus
+    - textmate
